@@ -91,7 +91,7 @@ VALUE method_write(VALUE self, VALUE address_rb, VALUE access_type_rb, VALUE dat
     int fd = open_dev_mem();
     void* virt_addr = virtual_address(fd, target);
 
-    unsigned long writeval = strtoul(StringValuePtr(data_rb), 0, 0);
+    unsigned long writeval = NUM2ULONG(data_rb);
 	switch(access_type) {
 		case 'b':
 			*((unsigned char *) virt_addr) = writeval;
@@ -124,7 +124,7 @@ static int read_access_type(VALUE access_type_rb)
 
 static off_t read_target(VALUE address)
 {
-    return strtoul(StringValuePtr(address), 0, 0);
+    return NUM2ULONG(address);
 }
 
 static int open_dev_mem() 
