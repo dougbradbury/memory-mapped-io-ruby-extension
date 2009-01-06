@@ -3,7 +3,8 @@
  *
  *  Copyright (C) 2008, Doug Bradbury (bradbury@8thlight.com)
  *
- *
+ * This extension is based on the devmem2 program availible under the
+ * same license:  http://www.simtec.co.uk/appnotes/AN0014/
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
